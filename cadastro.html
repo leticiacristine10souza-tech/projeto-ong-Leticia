@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Cadastre-se como voluntário no Projeto Letícia e faça a diferença.">
+    <title>Projeto Letícia | Cadastro de Voluntário</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="container">
+            <a href="index.html" class="logo-link">
+                <img src="assets/images/logo_projeto_leticia-v2.png" alt="Logotipo Oficial do Projeto Letícia" class="logo-img">
+                <span class="logo-text">Projeto Letícia</span>
+            </a>
+            <nav class="main-nav" aria-label="Navegação Principal">
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="projetos.html">Projetos</a></li>
+                    <li><a href="cadastro.html" class="active" aria-current="page">Seja Voluntário</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main-content" class="container">
+        <section class="form-section">
+            <h1>Cadastro de Colaborador / Voluntário</h1>
+            <p>Preencha os campos abaixo para integrar nossa rede. Os campos identificados com asterisco (*) são de preenchimento obrigatório.</p>
+
+            <form id="form-cadastro" action="#" method="POST" novalidate>
+                
+                <!-- Bloco 1: Identificação Pessoal -->
+                <fieldset>
+                    <legend>Identificação Pessoal</legend>
+                    
+                    <div class="form-group">
+                        <label for="nome">Nome Completo *</label>
+                        <input type="text" id="nome" name="nome" required minlength="3" maxlength="100" autocomplete="name" placeholder="Ex: Ana Maria da Silva">
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="data-nascimento">Data de Nascimento *</label>
+                            <input type="date" id="data-nascimento" name="data-nascimento" required autocomplete="bday">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="genero">Gênero</label>
+                            <select id="genero" name="genero" autocomplete="sex">
+                                <option value="">Selecione...</option>
+                                <option value="feminino">Feminino</option>
+                                <option value="masculino">Masculino</option>
+                                <option value="nao-binario">Não-binário</option>
+                                <option value="prefiro-nao-informar">Prefiro não informar</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="cpf">CPF *</label>
+                            <input type="text" id="cpf" name="cpf" required inputmode="numeric" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" placeholder="000.000.000-00" maxlength="14" title="Digite um CPF no formato 000.000.000-00">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="telefone">Telefone / WhatsApp *</label>
+                            <input type="tel" id="telefone" name="telefone" required inputmode="tel" autocomplete="tel" pattern="\\(\d{2}\\) \d{4,5}-\d{4}" placeholder="(00) 00000-0000" maxlength="15" title="Digite um telefone com DDD no formato (00) 00000-0000">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">E-mail de Contato *</label>
+                        <input type="email" id="email" name="email" required autocomplete="email" placeholder="nome@exemplo.com.br">
+                    </div>
+                </fieldset>
+
+                <!-- Bloco 2: Endereço Residencial -->
+                <fieldset>
+                    <legend>Endereço Residencial</legend>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="cep">CEP *</label>
+                            <input type="text" id="cep" name="cep" required inputmode="numeric" autocomplete="postal-code" pattern="\d{5}-\d{3}" placeholder="00000-000" maxlength="9" title="Digite um CEP no formato 00000-000">
+                        </div>
+
+                        <div class="form-group flex-2">
+                            <label for="logradouro">Logradouro / Rua *</label>
+                            <input type="text" id="logradouro" name="logradouro" required autocomplete="address-line1" placeholder="Ex: Av. Paulista">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="numero">Número *</label>
+                            <input type="text" id="numero" name="numero" required autocomplete="address-line2" placeholder="123">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="complemento">Complemento</label>
+                            <input type="text" id="complemento" name="complemento" placeholder="Apto 42">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="bairro">Bairro *</label>
+                            <input type="text" id="bairro" name="bairro" required placeholder="Bela Vista">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="cidade">Cidade *</label>
+                            <input type="text" id="cidade" name="cidade" required autocomplete="address-level2" placeholder="São Paulo">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="uf">Estado (UF) *</label>
+                            <select id="uf" name="uf" required autocomplete="address-level1">
+                                <option value="">UF...</option>
+                                <option value="AC">AC</option><option value="AL">AL</option><option value="AP">AP</option>
+                                <option value="AM">AM</option><option value="BA">BA</option><option value="CE">CE</option>
+                                <option value="DF">DF</option><option value="ES">ES</option><option value="GO">GO</option>
+                                <option value="MA">MA</option><option value="MT">MT</option><option value="MS">MS</option>
+                                <option value="MG">MG</option><option value="PA">PA</option><option value="PB">PB</option>
+                                <option value="PR">PR</option><option value="PE">PE</option><option value="PI">PI</option>
+                                <option value="RJ">RJ</option><option value="RN">RN</option><option value="RS">RS</option>
+                                <option value="RO">RO</option><option value="RR">RR</option><option value="SC">SC</option>
+                                <option value="SP">SP</option><option value="SE">SE</option><option value="TO">TO</option>
+                            </select>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <!-- Bloco 3: Perfil do Voluntariado -->
+                <fieldset>
+                    <legend>Perfil do Voluntariado</legend>
+
+                    <div class="form-group">
+                        <label for="projeto-interesse">Iniciativa de Interesse *</label>
+                        <select id="projeto-interesse" name="projeto-interesse" required>
+                            <option value="">-- Selecione o projeto --</option>
+                            <option value="leitura">Projeto Leitura Para Todos</option>
+                            <option value="marmita">Marmita Solidária</option>
+                            <option value="tecnologia">Capacitação Digital</option>
+                            <option value="gestao">Apoio Administrativo / Eventos</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="disponibilidade">Disponibilidade Semanal (horas) *</label>
+                        <input type="number" id="disponibilidade" name="disponibilidade" required min="1" max="40" placeholder="Ex: 4">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="motivacao">Motivação</label>
+                        <textarea id="motivacao" name="motivacao" rows="4" placeholder="Escreva brevemente suas motivações..."></textarea>
+                    </div>
+                </fieldset>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-primary">Concluir Cadastro</button>
+                    <button type="reset" class="btn btn-outline">Limpar Formulário</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <p>&copy; 2026 Projeto Letícia. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="js/masks.js"></script>
+</body>
+</html>
